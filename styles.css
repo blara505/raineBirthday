@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7fa67;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    transform: scale(0.8); /* Zoom out by 20% */
+    transform-origin: center top; /* Keep the scaling centered */
+}
+
+.sunflower-left, .sunflower-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 240px; /* Adjusted width */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+}
+
+.sunflower-left {
+    left: -60px; /* Adjusted position */
+}
+
+.sunflower-right {
+    right: -60px; /* Adjusted position */
+}
+
+.sunflower-left img, .sunflower-right img {
+    width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 360px; /* Adjusted max-width */
+    background: #fff;
+    padding: 15px; /* Adjusted padding */
+    border-radius: 4.5px; /* Adjusted border-radius */
+    box-shadow: 0 1.8px 3.6px rgba(0, 0, 0, 0.1); /* Adjusted box-shadow */
+    z-index: 1;
+    position: relative;
+    margin: 100x auto 0; /* Added margin-top to push container down */
+    margin-top: 250px;
+}
+
+.about {
+    text-align: center;
+    margin-bottom: 18px; /* Adjusted margin-bottom */
+    font-size: 0.6em; /* Adjusted font-size */
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    padding: 9px; /* Adjusted padding */
+    border: 0.9px solid #ff69b4; /* Adjusted border */
+    border-radius: 6.75px; /* Adjusted border-radius */
+    box-shadow: 0 4.5px 6.75px rgba(0, 0, 0, 0.1); /* Adjusted box-shadow */
+}
+
+.about h1 {
+    font-size: 3em; /* Adjusted font-size */
+    color: #fff;
+    margin-bottom: 6.75px; /* Adjusted margin-bottom */
+}
+
+.about p {
+    font-size: 2em; /* Adjusted font-size */
+    line-height: 1.5; /* Maintain line height for readability */
+    color: #fff;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 9px auto; /* Adjusted margin */
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%; /* Ensure it takes the full width of the container */
+}
+
+.carousel-slide {
+    display: flex;
+    width: 100%; /* Each slide should take the full width */
+}
+
+.carousel-slide img {
+    min-width: 100%; /* Ensure each image takes full width of the container */
+    height: auto;
+    object-fit: cover;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    font-size: 0.9em; /* Adjusted font-size */
+    cursor: pointer;
+    padding: 4.5px; /* Adjusted padding */
+    z-index: 10;
+}
+
+#prevBtn {
+    left: 4.5px; /* Adjusted position */
+}
+
+#nextBtn {
+    right: 4.5px; /* Adjusted position */
+}
+
+#presentBtn {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    margin-top:  25px;
+    background-color: #ffb6c1; /* Pinkish hue */
+    border: 1px solid #ffb6c1; /* Same color as background */
+    color: #fff;
+    font-size: 1em;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 4px;
+}
+
+#presentBtn:hover {
+    background-color: #ff69b4; /* Lighter pink on hover */
+    border-color: #ff69b4;
+}
+.present-images {
+    display: none;
+}
+
+.present-images.show {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.present-images img {
+    max-width: 100px; /* Adjust size as needed */
+    height: auto;
+    margin: 0 10px; /* Adjust spacing between images */
+}
+
